@@ -33,13 +33,26 @@ const greetCustomer = () => {
 // outputs a list with the size, crust, and toppings
 
 
+const compareToppings = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) {
+    return false;
+  } else {
+    for (let i = 0; i < arr1.length; i++){
+      if (arr1[i] !== arr2[i]) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 const getPizzaOrder = (size, crust, ...toppings) => {
   let pizzaOrder = `One ${size} ${crust} pizza with `;
   let orderArr = [size, crust, toppings];
 
   if (toppings.length === 0) { // Bonus challenge #2
     pizzaOrder += "cheese coming right up!";
-  } else if (JSON.stringify(orderArr[2]) === JSON.stringify(pizzaToppings)){ // Bonus challenge #3
+  } else if (compareToppings(toppings, pizzaToppings)){ // Bonus challenge #3
     for (let topping of toppings) {
       if (topping === toppings[toppings.length-1]) { // Bonus challenge #1
         pizzaOrder += `and ${topping} coming right up!`;
@@ -72,7 +85,7 @@ const preparePizza = (arr) => {
     toppings: arr[2]
   };
 
-  if ((JSON.stringify(pizza.toppings) === JSON.stringify(pizzaToppings))){ // Bonus challenge #3 check
+  if (compareToppings(arr[2], pizzaToppings)){ // Bonus challenge #3 check
     console.log(action);
     return pizza;
   } else if (pizza.toppings.length === 0) { // Bonus challenge #2
@@ -98,7 +111,7 @@ const servePizza = (pizzaObj) => {
 
   if (pizzaObj.toppings.length === 0){ // Bonus challenge #2
     orderUp += "cheese. Enjoy!";
-  } else if ((JSON.stringify(pizzaObj.toppings) === JSON.stringify(pizzaToppings))){ // Bonus challenge #3 check
+  } else if (compareToppings(pizzaObj.toppings, pizzaToppings)){ // Bonus challenge #3 check
     for (let topping of pizzaObj.toppings) {
       if (topping === pizzaObj.toppings[pizzaObj.toppings.length-1]) {
         orderUp += `and ${topping}. Enjoy!`;
@@ -118,13 +131,13 @@ const servePizza = (pizzaObj) => {
 // Call each function and (starting with preparePizza) use the returned value from the previous function as its input
 greetCustomer();
 
-let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'bell peppers');
+// let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'bell peppers');
 
 // Bonus challenge #2
 // let customerOrder = getPizzaOrder('small', 'pan'); // with no toppings
 
 // Bonus challenge #3
-// let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'banana peppers');
+let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'banana peppers');
 
 servePizza(preparePizza(customerOrder));
 
