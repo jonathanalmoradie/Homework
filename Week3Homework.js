@@ -131,13 +131,13 @@ const servePizza = (pizzaObj) => {
 // Call each function and (starting with preparePizza) use the returned value from the previous function as its input
 greetCustomer();
 
-// let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'bell peppers');
+let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'bell peppers');
 
 // Bonus challenge #2
 // let customerOrder = getPizzaOrder('small', 'pan'); // with no toppings
 
 // Bonus challenge #3
-let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'banana peppers');
+// let customerOrder = getPizzaOrder('large', 'thin crust', 'pepperoni', 'sausage', 'mushrooms', 'banana peppers');
 
 servePizza(preparePizza(customerOrder));
 
