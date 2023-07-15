@@ -1,0 +1,72 @@
+html {
+  background-color: antiquewhite;
+}
+
+body {
+  text-align: center;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+#top {
+  display: flex;
+}
+
+img {
+  max-width: 50%;
+}
+
+#top > img {
+  height: 50%;
+  width: 50%;
+}
+
+#earlyCareer > img,
+#proCareer > img {
+  width: 50vw;
+  margin: 10px;
+}
+
+div {
+  border: 2px solid burlywood;
+  margin: 10px;
+}
+
+p {
+  padding: 0 10px 0 10px;
+}
+
+#introPic {
+  float: left;
+}
+
+#bio {
+  justify-content: end;
+}
+#bio > li {
+  padding: 2px;
+}
+
+#pro {
+  width: auto;
+}
+
+@media (max-width: 500px) {
+  * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    width: 75vw;
+  }
+
+  div {
+    width: 80%;
+  }
+}
