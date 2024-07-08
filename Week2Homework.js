@@ -15,6 +15,6 @@ if (numberOfToppings < 10) {
 //Bonus Challenge:
 for (let i = 1; i <= numberOfToppings; i++){
   if (i % 2 === 0) {
-    console.log(i)
+    console.log("i: " + i)
   }
 }

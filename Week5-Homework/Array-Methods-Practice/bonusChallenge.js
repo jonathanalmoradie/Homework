@@ -316,7 +316,6 @@ const data = [
 //   user7: ...
 // }
 
-
 // users obj. structure
 const users = {
   user1: {
@@ -352,6 +351,7 @@ data.forEach(task => {
     users.user1.incompleteTasks.push(task.title);
   }
 });
+
 // ------
 
 // User3

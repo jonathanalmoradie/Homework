@@ -367,7 +367,7 @@ console.log(user5);
 // ------
 // then, create a list of title and body pairs
 
-const titleBody = data.map(post => [post.title, post.body])
+const titleBody = user5.map(post => [post.title, post.body])
 console.log(titleBody)
 
 // ------

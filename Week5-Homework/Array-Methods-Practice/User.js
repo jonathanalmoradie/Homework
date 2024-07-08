@@ -236,7 +236,7 @@ const data = [
 
 // create and print a list of phone numbers
 const phoneNumbers = data.map(user => user.phone)
-console.log(phoneNumbers)
+// console.log(phoneNumbers)
 
 // ------
 // create and print a list of website and email pairs (pair them in a string, array, or object)

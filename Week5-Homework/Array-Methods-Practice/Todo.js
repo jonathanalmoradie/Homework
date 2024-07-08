@@ -1,4 +1,4 @@
-// In the Todo.js file, use the placeholder To-Do data at https://jsonplaceholder.typicode.com/todos?_limit=50 to:
+cd // In the Todo.js file, use the placeholder To-Do data at https://jsonplaceholder.typicode.com/todos?_limit=50 to:
 
 const data = [
   {
@@ -315,15 +315,8 @@ console.log(user3); // user 3 tasks
 // then find the number of user 3's incomplete tasks
 
 const user3Incomplete = user3.filter(task => task.completed == false);
-const numUser3Incomplete = user3Incomplete.reduce((sum, task) => {
-  if (task) {
-    sum++;
-  }
-  return sum;
-}, 0);
 
-console.log(user3Incomplete); // list of user 3 incomplete tasks
-
-console.log(numUser3Incomplete); // number of user 3 incomplete tasks
+console.log(user3Incomplete.length); // number of user 3 incomplete tasks
+// console.log(user3Incomplete); // list of user 3 incomplete tasks
 
 // ------
